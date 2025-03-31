@@ -268,6 +268,12 @@ body {
     text-align: center;
 }
 
+.about-image{
+    flex-shrink: 0;
+    width: 280px;
+    margin: 0 20px;
+}
+
 .section-title {
     font-size: 36px;
     font-weight: 700;
@@ -352,12 +358,22 @@ body {
     background-color: #f8fafc;
 }
 
+.containerr {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    margin-top: -10%;
+}
+
 .section-title {
     font-size: 36px;
     color: var(--text-color);
     margin-bottom: 20px;
     text-align: center;
     font-weight: 700;
+    margin-top: 10%;
 }
 
 .section-description {
@@ -394,8 +410,8 @@ body {
 }
 
 .mobile-image {
-    width: 100%;
-    height: auto;
+    width: 290px;
+    height: 550px;
     border-radius: 30px;
     box-shadow: 0 20px 40px rgba(0, 0, 0, 0.15);
     border: 10px solid white;
@@ -409,6 +425,7 @@ body {
     border-radius: 12px;
     box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1);
     transition: all 0.3s ease;
+    width: 250px;
 }
 
 .feature-card:hover {
