@@ -139,3 +139,56 @@ document.addEventListener('DOMContentLoaded', function() {
         });
     }
 });
+
+// P&L Counter Animation
+function animatePandL() {
+    const counterElement = document.querySelector('.counting-number');
+    const percentageElement = document.querySelector('.percentage');
+    
+    if (counterElement && percentageElement) {
+        // Animate the last 3 digits (000 to 999)
+        let count = 0;
+        const duration = 3000; // 3 seconds
+        const increment = 999 / (duration / 16); // 60fps
+        
+        const timer = setInterval(() => {
+            count += increment;
+            if (count >= 999) {
+                clearInterval(timer);
+                counterElement.textContent = '999';
+            } else {
+                counterElement.textContent = Math.floor(count).toString().padStart(3, '0');
+            }
+        }, 16);
+        
+        // Small animation for percentage (optional)
+        let percent = 0;
+        const finalPercent = 6.35;
+        const percentIncrement = finalPercent / (duration / 16);
+        
+        const percentTimer = setInterval(() => {
+            percent += percentIncrement;
+            if (percent >= finalPercent) {
+                clearInterval(percentTimer);
+                percentageElement.textContent = finalPercent.toFixed(2);
+            } else {
+                percentageElement.textContent = percent.toFixed(2);
+            }
+        }, 16);
+    }
+}
+
+// Animate when section comes into view
+const superTradersObserver = new IntersectionObserver((entries) => {
+    entries.forEach(entry => {
+        if (entry.isIntersecting) {
+            animatePandL();
+            superTradersObserver.unobserve(entry.target);
+        }
+    });
+}, { threshold: 0.5 });
+
+const superTradersSection = document.querySelector('.super-traders-section');
+if (superTradersSection) {
+    superTradersObserver.observe(superTradersSection);
+}

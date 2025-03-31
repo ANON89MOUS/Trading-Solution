@@ -499,3 +499,172 @@ body {
         font-size: 18px;
     }
 }
+
+/* Built For Super Traders Section */
+.super-traders-section {
+    padding: 80px 0;
+    background-color: white;
+}
+
+.features-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr 0.8fr;
+    gap: 30px;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.feature-column {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+.featuree-card {
+    background-color: #f8fafc;
+    padding: 25px;
+    border-radius: 12px;
+    transition: all 0.3s ease;
+}
+
+.feature-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.1);
+}
+
+.feature-card-title {
+    font-size: 18px;
+    color: var(--text-color);
+    margin-bottom: 8px;
+    font-weight: 600;
+}
+
+.feature-card-highlight {
+    font-size: 20px;
+    color: var(--primary-color);
+    font-weight: 700;
+}
+
+.explore-all {
+    margin-top: 10px;
+}
+
+.explore-link {
+    color: var(--primary-color);
+    font-weight: 600;
+    text-decoration: none;
+    font-size: 18px;
+    transition: all 0.3s ease;
+}
+
+.explore-link:hover {
+    color: #1d4ed8;
+    text-decoration: underline;
+}
+
+.stats-column {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+.stats-card {
+    background-color: #f8fafc;
+    padding: 25px;
+    border-radius: 12px;
+}
+
+.stats-title {
+    font-size: 18px;
+    color: var(--text-color);
+    margin-bottom: 15px;
+    font-weight: 600;
+}
+
+.stats-value {
+    font-size: 24px;
+    font-weight: 700;
+    color: var(--primary-color);
+    margin-bottom: 5px;
+}
+
+.stats-note {
+    font-size: 14px;
+    color: #64748b;
+}
+
+.margin-stats {
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+}
+
+.margin-row {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.margin-label {
+    font-size: 16px;
+    color: var(--text-color);
+}
+
+.margin-value {
+    font-size: 18px;
+    font-weight: 600;
+    color: var(--primary-color);
+}
+
+/* Counting Animation */
+.counting-number {
+    display: inline-block;
+    min-width: 40px;
+}
+
+/* Responsive Adjustments */
+@media (max-width: 992px) {
+    .features-grid {
+        grid-template-columns: 1fr;
+    }
+    
+    .feature-column {
+        margin-bottom: 20px;
+    }
+    
+    .stats-column {
+        flex-direction: row;
+        flex-wrap: wrap;
+    }
+    
+    .stats-card {
+        flex: 1;
+        min-width: 250px;
+    }
+}
+
+@media (max-width: 576px) {
+    .section-title {
+        font-size: 28px;
+    }
+    
+    .section-description {
+        font-size: 16px;
+    }
+    
+    .feature-card {
+        padding: 20px;
+    }
+    
+    .feature-card-title {
+        font-size: 16px;
+    }
+    
+    .feature-card-highlight {
+        font-size: 18px;
+    }
+    
+    .stats-value {
+        font-size: 20px;
+    }
+}
